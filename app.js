@@ -132,6 +132,7 @@ function login() {
             },
         }
         request(options, (err, response, body) => {
+            console.log(body)
             resolve(body)
         });
     });
