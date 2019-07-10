@@ -10,6 +10,7 @@ var companyDetailUrls = require('./pagelinks.js');
 start();
 
 async function start() {
+    await login();
     // getDetailPage();
     getCompaydetail();
 }
@@ -144,8 +145,8 @@ function loadPage(url, referer) {
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36',
                 'referer': referer,
                 'origin': 'https://donsdirectory.com',
-                'Cookie': 'PHPSESSID=oie7888ads3o107fqm3j7p35k4; browserHeight=969; goto=listing.php%3Fi%3DTXpJPQ%253D%253D; browserWidth=941',
-            }
+            },
+            jar: j
         }
         request(options, (err, response, body) => {
             resolve(body)
