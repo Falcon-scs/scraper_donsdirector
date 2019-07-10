@@ -1,0 +1,29 @@
+{
+  "name": "donsdirectoryscraper",
+  "version": "1.0.0",
+  "description": "scraper",
+  "main": "app.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "csv-stringify": "^5.3.0",
+    "fs": "^0.0.1-security",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-maple/scraper_donsdirector.git"
+  },
+  "keywords": [
+    "donsdirectory"
+  ],
+  "author": "vladimir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-maple/scraper_donsdirector/issues"
+  },
+  "homepage": "https://github.com/dev-maple/scraper_donsdirector#readme"
+}
