@@ -20,7 +20,7 @@ async function start() {
 
 async function getCompaydetail() {
     let all_companydetails = []
-    for (let i = 0; i < companyDetailUrls.length; i++) {
+    for (let i = 100; i < companyDetailUrls.length; i++) {
         console.log('....scraping....  ' + i)
         let url = companyDetailUrls[i].link;
         let companydetail = {
