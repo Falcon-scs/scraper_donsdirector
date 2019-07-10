@@ -150,7 +150,7 @@ function loadPage(url, referer) {
             method: 'GET',
             headers: {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36',
+                'user-agent': null,
                 'referer': referer,
                 'origin': 'https://donsdirectory.com',
                 'host': 'donsdirectory.com',
@@ -160,7 +160,6 @@ function loadPage(url, referer) {
             jar: j
         }
         request(options, (err, response, body) => {
-            console.log(body)
             resolve(body)
         });
     })
