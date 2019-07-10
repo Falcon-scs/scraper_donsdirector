@@ -14,7 +14,6 @@ async function start() {
     // await login();
     // console.log("login end")
     // cookies = j.getCookieString('https://donsdirectory.com'); 
-    // console.log(cookies)
     // getDetailPage();
     getCompaydetail();
 }
@@ -156,7 +155,7 @@ function loadPage(url, referer) {
                 'origin': 'https://donsdirectory.com',
                 'host': 'donsdirectory.com',
                 // 'Cookie': cookies + '; browserWidth=893; browserHeight=969'
-                'Cookie': 'PHPSESSID=oie7888ads3o107fqm3j7p35k4; browserHeight=969; browserWidth=893'
+                'Cookie': 'PHPSESSID=dn7satkcul8g2f4iq9c8nqgjg4; browserHeight=969; browserWidth=893'
             },
             jar: j
         }
