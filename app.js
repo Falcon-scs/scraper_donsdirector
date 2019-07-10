@@ -160,6 +160,7 @@ function loadPage(url, referer) {
             jar: j
         }
         request(options, (err, response, body) => {
+            console.log(body)
             resolve(body)
         });
     })
