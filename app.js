@@ -150,8 +150,10 @@ function loadPage(url, referer) {
             method: 'GET',
             headers: {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-                'user-agent': null,
+                'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36',
                 'referer': referer,
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Accept-Encoding': 'gzip, deflate, br',
                 'origin': 'https://donsdirectory.com',
                 'host': 'donsdirectory.com',
                 // 'Cookie': cookies + '; browserWidth=893; browserHeight=969'
