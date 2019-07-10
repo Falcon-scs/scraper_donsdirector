@@ -10,7 +10,9 @@ var companyDetailUrls = require('./pagelinks.js');
 start();
 
 async function start() {
+    console.log("login start")
     await login();
+    console.log("login end")
     // getDetailPage();
     getCompaydetail();
 }
