@@ -6,13 +6,15 @@ var j = request.jar()
 
 var detailPageLinks = []
 var companyDetailUrls = require('./pagelinks.js');
-
+var cookies;
 start();
 
 async function start() {
-    console.log("login start")
-    await login();
-    console.log("login end")
+    // console.log("login start")
+    // await login();
+    // console.log("login end")
+    // cookies = j.getCookieString('https://donsdirectory.com'); 
+    // console.log(cookies)
     // getDetailPage();
     getCompaydetail();
 }
@@ -23,6 +25,7 @@ async function getCompaydetail() {
         console.log('....scraping....  ' + i)
         let url = companyDetailUrls[i].link;
         let companydetail = {
+            index: i,
             url: url,
             referer: companyDetailUrls[i].referer,
             name: '',
@@ -39,6 +42,10 @@ async function getCompaydetail() {
                 tables.push($(this))
             }
         })
+        if(tables.length == 0) {
+            console.log("Error page");
+            break;
+        }
         //get company name,domain, activity
         let firstTable = tables[0];
         firstTable.find('td').each(function (i, elem) {
@@ -132,7 +139,6 @@ function login() {
             },
         }
         request(options, (err, response, body) => {
-            console.log(body)
             resolve(body)
         });
     });
@@ -148,6 +154,9 @@ function loadPage(url, referer) {
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36',
                 'referer': referer,
                 'origin': 'https://donsdirectory.com',
+                'host': 'donsdirectory.com',
+                // 'Cookie': cookies + '; browserWidth=893; browserHeight=969'
+                'Cookie': 'PHPSESSID=oie7888ads3o107fqm3j7p35k4; browserHeight=969; browserWidth=893'
             },
             jar: j
         }
